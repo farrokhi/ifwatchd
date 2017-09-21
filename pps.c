@@ -11,7 +11,7 @@ int main(void)
     char *name;
 
     if (getifaddrs(&ifap) != 0) {
-        printf("error\n");
+        fprintf(stderr, "error\n");
     }
     else {
         for (ifa = ifap; ifa; ifa= ifa->ifa_next) {
